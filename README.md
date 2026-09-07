@@ -10,10 +10,10 @@ Une application web légère permettant d'identifier les utilisateurs via le sca
 
 🛠 Technologies Utilisées
 
-- Frontend :** HTML5, CSS3, JavaScript 
-- Stockage Local :localStorage du navigateur
+- Frontend : HTML5, CSS3, JavaScript 
+- Stockage Local : localStorage du navigateur
 - Backend & Base de données : 
-- Hébergement :
+- Hébergement : github page, ou via le lycée ? à voir 
 
 🏗 Comment ça marche ? (Flux utilisateur)
 
