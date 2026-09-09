@@ -21,15 +21,28 @@
 $fichierCsv = __DIR__ . '/data/scans.csv';
 
 // TODO 1 : récupérer $_GET['batiment'] et $_GET['point']
+$BATIMENT = $_GET['batiment'];
+$POINT = $_GET['point'];
 
 // TODO 2 : générer le nombre aléatoire
 // Indice : fonction rand()
+$nombre = rand(1,10000);
 
 // TODO 3 : déterminer le prochain identifiant auto-incrémenté
 // Indice : combien de lignes contient déjà $fichierCsv avant d'y ajouter la nouvelle ?
 //          (attention à ne pas compter la ligne d'en-têtes)
+$lignes = file($fichierCsv);
+$nbLignes = count($lignes) - 1;
+$identifiant = $nbLignes + 1;
 
 // TODO 4 : ouvrir $fichierCsv en mode "ajout" (pas en écrasement) et y écrire la nouvelle ligne
 // Indice : fopen($fichierCsv, 'a') puis fputcsv(), ne pas oublier fclose()
+$date = date('d-m-Y');
+$heure = date('H:i:s');
+
+$fp = fopen($fichierCsv, 'a');
+fputcsv($fp, [$identifiant, $BATIMENT, $POINT, $date, $heure, $nombre]);
+fclose($fp);
 
 // TODO 5 : renvoyer uniquement le nombre généré au navigateur (un simple echo suffit)
+echo $nombre;

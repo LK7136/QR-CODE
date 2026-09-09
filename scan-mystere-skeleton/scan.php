@@ -18,8 +18,8 @@
 // Rappel : $_GET['nom_du_parametre']
 // Pensez à gérer le cas où l'un des deux serait absent de l'URL.
 
-$batiment = null; // TODO
-$point    = null; // TODO
+$batiment = $_GET['batiment'];
+$point    = $_GET['point']; 
 ?>
 <!DOCTYPE html>
 <html lang="fr">
